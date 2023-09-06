@@ -1,0 +1,55 @@
+@import 'helpers';
+
+.social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: rem-calc(60);
+
+  @include breakpoint(small) {
+    gap: 4rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    height: rem-calc(50);
+    color: $primary-500;
+    transition: 0.22s;
+
+    @include breakpoint(small) {
+      height: rem-calc(70);
+    }
+  }
+}
+
+.icon {
+  height: rem-calc(90);
+  width: rem-calc(90);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50rem;
+  box-shadow: 0px 3px 8px $grey-300, inset 0px 2px 3px $grey-100;
+  transition: 0.15s ease-in;
+
+  @include breakpoint(small) {
+    height: rem-calc(120);
+    width: rem-calc(120);
+  }
+
+  &:hover {
+    box-shadow: 0px 3px 8px $grey-100, inset 0px 2px 5px $grey-300;
+
+    svg {
+      
+      transform: scale(0.95);
+    }
+  }
+}

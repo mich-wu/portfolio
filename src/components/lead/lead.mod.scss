@@ -1,0 +1,37 @@
+@import 'helpers';
+
+.lead {
+  position: relative;
+
+  &__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subheading {
+    margin-bottom: rem-calc(10);
+  }
+
+  &__heading {
+    margin-bottom: rem-calc(18);
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: rem-calc(32);
+  }
+
+  &--align-left {
+    .lead__content {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-start;
+      max-width: rem-calc(768);
+    }
+  }
+}

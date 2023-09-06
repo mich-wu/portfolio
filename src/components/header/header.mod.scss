@@ -1,0 +1,44 @@
+@import 'helpers';
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+  height: rem-calc(70);
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: rem-calc(180);
+    }
+  }
+
+  &__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: rem-calc(32);
+  }
+
+  &__link {
+    a {
+      color: $dark;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}

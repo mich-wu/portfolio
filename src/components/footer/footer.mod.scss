@@ -1,0 +1,80 @@
+@import 'helpers';
+
+.footer {
+  position: relative;
+  background-color: $grey-600;
+  padding: rem-calc(60) 0;
+
+  @include breakpoint(small) {
+    padding: rem-calc(100) 0;
+  }
+
+  h3 {
+    font-family: 'Raleway';
+    font-weight: 600;
+    color: $light;
+    max-width: rem-calc(300);
+    font-size: rem-calc(24);
+    line-height: rem-calc(35);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: rem-calc(20);
+    align-items: center;
+    text-align: center;
+
+    @include breakpoint(small) {
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 4rem;
+      text-align: left;
+      align-items: unset;
+    }
+
+    p,
+    a {
+      color: $light;
+      font-weight: 600;
+    }
+
+    span,
+    span a {
+      margin-left: rem-calc(10);
+      font-weight: 400;
+    }
+  }
+  &__phone {
+    text-decoration: none;
+  }
+
+  &__contact {
+    max-width: rem-calc(350);
+  }
+
+  &__bar {
+    background-color: $grey-700;
+    padding: rem-calc(20) 0;
+
+    span,
+    a {
+      font-size: rem-calc(14);
+      color: $light;
+    }
+  }
+
+  &__credit {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: rem-calc(22);
+
+    br {
+      @include breakpoint(small) {
+        display: none;
+      }
+    }
+  }
+}
