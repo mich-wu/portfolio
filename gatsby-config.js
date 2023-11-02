@@ -12,6 +12,17 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: `a4e9727ae7987aecb4885b73d904d1`,
+        environment: `main`,
+        previewMode: false,
+        disableLiveReload: false,
+        pageSize: 500,
+      },
+    },
+    'gatsby-plugin-image',
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         cssLoaderOptions: {
@@ -42,7 +53,7 @@ module.exports = {
           {
             name: `Inter`,
             file: `https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap`,
-          }
+          },
         ],
       },
     },

@@ -32,7 +32,7 @@ const Header = () => {
           <ul className={style.header__links}>
             {links.map((item) => (
               <li key={item.text} className={style.header__link}>
-                <a href={item.link}>{item.text}</a>
+                {/* <a href={item.link}>{item.text}</a> */}
               </li>
             ))}
           </ul>

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/global/layout';
 import Header from '../components/header/header';
 import Social from '../components/social/social';
@@ -11,7 +12,9 @@ import Image from '../components/image/image';
 import imgSrc from '../images/person.jpg';
 import Services from '../components/services/services';
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const { title } = data.datoCmsHomepage;
+
   return (
     <Layout>
       <Header />
@@ -19,11 +22,9 @@ const IndexPage = () => {
         <Container gutters>
           <Spacing pt={6} pb={6}>
             <Lead
-              heading={'UX Reviews'}
+              heading={title}
               subheading={'Design'}
-              text={
-                'How do you create compelling presentations that wow your colleagues and impress your managers? Here is how to get started.'
-              }
+              text={'meowmeoemwoemwo'}
             />
             <Spacing pt={3}>
               <Image image={imgSrc} />
@@ -32,7 +33,7 @@ const IndexPage = () => {
         </Container>
       </Section>
       <Section id={'services'}>
-        <Container bg='white' gutters>
+        <Container bg="white" gutters>
           <Spacing pt={6} pb={6}>
             <Services />
           </Spacing>
@@ -49,6 +50,15 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query {
+    datoCmsHomepage {
+      id: originalId
+      title
+    }
+  }
+`;
 
 export const Head = () => (
   <>
