@@ -1,12 +1,10 @@
-import React, { Children } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import style from './social.mod.scss';
-import Tiktok from '../global/icons/tiktok';
-import Instagram from '../global/icons/instagram';
-import Facebook from '../global/icons/facebook';
 import LinkedIn from '../global/icons/linkedin';
-import Youtube from '../global/icons/youtube';
 import Container from '../layout/container/container';
+import GithubIcon from '../global/icons/github';
+import MailIcon from '../global/icons/mail';
 import Lead from '../lead/lead';
 
 const Social = () => {
@@ -22,20 +20,14 @@ const Social = () => {
         }
       />
       <div className={classes}>
-        <Icon link={'https://www.tiktok.com/@rhubarblaneperth'}>
-          <Tiktok />
-        </Icon>
         <Icon link={'https://www.linkedin.com/company/rhubarblaneperth/'}>
           <LinkedIn />
         </Icon>
-        <Icon link={'https://www.instagram.com/rhubarblaneperth/'}>
-          <Instagram />
-        </Icon>
-        <Icon link={'https://www.facebook.com/rhubarblaneperth'}>
-          <Facebook />
+        <Icon link={'https://www.youtube.com/@rhubarblaneperth'}>
+          <GithubIcon />
         </Icon>
         <Icon link={'https://www.youtube.com/@rhubarblaneperth'}>
-          <Youtube />
+          <MailIcon />
         </Icon>
       </div>
     </Container>

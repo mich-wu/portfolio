@@ -13,7 +13,7 @@ import imgSrc from '../images/person.jpg';
 import Services from '../components/services/services';
 
 const IndexPage = ({ data }) => {
-  const { title } = data.datoCmsHomepage;
+  const { title, description } = data.datoCmsHomepage;
 
   return (
     <Layout>
@@ -21,11 +21,7 @@ const IndexPage = ({ data }) => {
       <Section id={'about'}>
         <Container gutters>
           <Spacing pt={6} pb={6}>
-            <Lead
-              heading={title}
-              subheading={'Design'}
-              text={'meowmeoemwoemwo'}
-            />
+            <Lead heading={title} subheading={'Design'} text={description} />
             <Spacing pt={3}>
               <Image image={imgSrc} />
             </Spacing>
@@ -56,6 +52,7 @@ export const query = graphql`
     datoCmsHomepage {
       id: originalId
       title
+      description
     }
   }
 `;

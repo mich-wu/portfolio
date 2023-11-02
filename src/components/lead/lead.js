@@ -13,7 +13,7 @@ const Lead = ({
   headingSize = 'xl',
   h1 = false,
   textAlign = 'centre',
-  noGutters
+  noGutters,
 }) => {
   const classes = cn(style.lead, {
     [style[`lead--align-left`]]: textAlign === 'left',
@@ -39,7 +39,7 @@ const Lead = ({
               light={dark}
             />
           </div>
-          <Text text={text} size="lg" light={dark} align={textAlign} />
+          <Text html text={text} size="lg" light={dark} align={textAlign} />
         </div>
       </div>
     </Container>
