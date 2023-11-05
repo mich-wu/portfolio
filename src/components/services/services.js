@@ -42,7 +42,7 @@ const Services = () => {
       <Spacing pb={4}>
         <Lead
           heading={'Feels like its from the future'}
-          subheading={'Services'}
+          subheading={'Study + Experience'}
           text={
             'Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups.'
           }

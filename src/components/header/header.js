@@ -2,7 +2,6 @@ import React from 'react';
 import cn from 'classnames';
 import style from './header.mod.scss';
 import Container from '../layout/container/container';
-import UntitledUiLogo from '../global/icons/untitled-ui';
 
 const Header = () => {
   const classes = cn(style.header);
@@ -13,8 +12,12 @@ const Header = () => {
       link: '#about',
     },
     {
-      text: 'Services',
-      link: '#services',
+      text: 'Study + Experience',
+      link: '#study',
+    },
+    {
+      text: 'Portfolio',
+      link: '#portfolio ',
     },
     {
       text: 'Contact',
