@@ -28,7 +28,14 @@ const IndexPage = ({ data }) => {
           </Spacing>
         </Container>
       </Section>
-      <Section id={'services'}>
+      <Section id={'study'}>
+        <Container bg="white" gutters>
+          <Spacing pt={6} pb={6}>
+            <Services />
+          </Spacing>
+        </Container>
+      </Section>
+      <Section id={'portfolio'}>
         <Container bg="white" gutters>
           <Spacing pt={6} pb={6}>
             <Services />
@@ -40,7 +47,7 @@ const IndexPage = ({ data }) => {
           <Social />
         </Spacing>
       </Section>
-      <Footer />
+      {/* <Footer /> */}
     </Layout>
   );
 };
