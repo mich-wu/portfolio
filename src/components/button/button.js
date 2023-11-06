@@ -22,7 +22,13 @@ const Button = ({
   };
 
   return (
-    <a href={link} className={classes} onClick={handleClick}>
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className={classes}
+      onClick={handleClick}
+    >
       <div className={style.button__inner}>{text}</div>
     </a>
   );

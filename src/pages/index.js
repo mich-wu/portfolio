@@ -21,6 +21,8 @@ const IndexPage = ({ data }) => {
     githubUrl,
     linkedinHeading,
     linkedinUrl,
+    getInTouchHeading,
+    getInTouchLink,
   } = data.datoCmsHomepage;
 
   return (
@@ -38,6 +40,8 @@ const IndexPage = ({ data }) => {
               githubUrl={githubUrl}
               linkedinHeading={linkedinHeading}
               linkedinUrl={linkedinUrl}
+              getInTouchHeading={getInTouchHeading}
+              getInTouchLink={getInTouchLink}
             />
             <Spacing pt={3}></Spacing>
           </Spacing>
@@ -82,6 +86,8 @@ export const query = graphql`
       githubUrl
       linkedinHeading
       linkedinUrl
+      getInTouchHeading
+      getInTouchLink
     }
   }
 `;

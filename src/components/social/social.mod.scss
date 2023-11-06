@@ -36,7 +36,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50rem;
-  box-shadow: 0px 3px 8px $grey-300, inset 0px 2px 3px $grey-100;
+  box-shadow: 0px 3px 8px $primary-300, inset 0px 2px 3px $aqua-purple-300;
   transition: 0.15s ease-in;
 
   @include breakpoint(small) {
@@ -45,7 +45,7 @@
   }
 
   &:hover {
-    box-shadow: 0px 3px 8px $grey-100, inset 0px 2px 5px $grey-300;
+    box-shadow: 0px 3px 8px $aqua-purple-300, inset 0px 2px 5px $primary-300;
 
     svg {
       

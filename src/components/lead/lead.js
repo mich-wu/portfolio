@@ -16,6 +16,8 @@ const Lead = ({
   githubUrl,
   linkedinHeading,
   linkedinUrl,
+  getInTouchHeading,
+  getInTouchLink,
 }) => {
   const classes = cn(style.lead);
 
@@ -29,11 +31,15 @@ const Lead = ({
           <div className={style.lead__heading}>
             <Heading text={heading} />
           </div>
-          <Text html text={text} />
-          {/* <Button text={'Get in touch'} /> */}
-          <Button text={githubHeading} link={githubUrl} transparent />
-          <Button text={linkedinHeading} link={linkedinUrl} />
+          <div className={style.lead__text}>
+            <Text html text={text} />
+          </div>
         </div>
+        <div className={style.lead__buttons}>
+          <Button text={githubHeading} link={githubUrl} transparent />
+          <Button text={linkedinHeading} link={linkedinUrl} transparent />
+        </div>
+        <Button text={getInTouchHeading} link={getInTouchLink} />
       </div>
     </Container>
   );

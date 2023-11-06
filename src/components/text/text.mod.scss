@@ -2,7 +2,7 @@
 
 .text {
   position: relative;
-  color: $grey-600;
+  color: $primary-500;
 
   &--size-sm {
     @include text-sm;
@@ -17,7 +17,7 @@
   }
 
   &--color-light {
-    color: $grey-100;
+    color: $aqua-purple-300;
   }
 
   &--color-dark {
