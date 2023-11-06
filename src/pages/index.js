@@ -13,7 +13,15 @@ import imgSrc from '../images/person.jpg';
 import Services from '../components/services/services';
 
 const IndexPage = ({ data }) => {
-  const { title, description } = data.datoCmsHomepage;
+  const {
+    title,
+    description,
+    image,
+    githubHeading,
+    githubUrl,
+    linkedinHeading,
+    linkedinUrl,
+  } = data.datoCmsHomepage;
 
   return (
     <Layout>
@@ -21,14 +29,21 @@ const IndexPage = ({ data }) => {
       <Section id={'about'}>
         <Container gutters>
           <Spacing pt={6} pb={6}>
-            <Lead heading={title} subheading={'Design'} text={description} />
-            <Spacing pt={3}>
-              <Image image={imgSrc} />
-            </Spacing>
+            <Lead
+              heading={title}
+              subheading={'Design'}
+              text={description}
+              image={image}
+              githubHeading={githubHeading}
+              githubUrl={githubUrl}
+              linkedinHeading={linkedinHeading}
+              linkedinUrl={linkedinUrl}
+            />
+            <Spacing pt={3}></Spacing>
           </Spacing>
         </Container>
       </Section>
-      <Section id={'study'}>
+      {/* <Section id={'study'}>
         <Container bg="white" gutters>
           <Spacing pt={6} pb={6}>
             <Services />
@@ -46,7 +61,7 @@ const IndexPage = ({ data }) => {
         <Spacing pt={6} pb={8}>
           <Social />
         </Spacing>
-      </Section>
+      </Section> */}
       {/* <Footer /> */}
     </Layout>
   );
@@ -60,6 +75,13 @@ export const query = graphql`
       id: originalId
       title
       description
+      image {
+        gatsbyImageData(imgixParams: { fit: "crop", w: "106", h: "106" })
+      }
+      githubHeading
+      githubUrl
+      linkedinHeading
+      linkedinUrl
     }
   }
 `;

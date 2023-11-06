@@ -1,0 +1,73 @@
+@import 'helpers';
+
+.button {
+  position: relative;
+  background-color: $primary-300;
+  padding: rem-calc(3);
+  border-radius: rem-calc(200);
+  text-decoration: none;
+  color: $white;
+  font-size: rem-calc(20);
+  font-weight: 500;
+  line-height: normal;
+  // letter-spacing: 3px;
+  transition: 0.1s;
+  // width: calc(100% - 2rem);
+  max-width: rem-calc(250);
+  display: block;
+
+  @include breakpoint(small) {
+    // width: unset;
+    // max-width: unset;
+  }
+
+  &:hover {
+    background-color: $primary-500;
+    transition: 0.1s;
+  }
+
+  &__inner {
+    padding: rem-calc(12);
+    border: 1px solid $white;
+    border-radius: rem-calc(200);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @include breakpoint(small) {
+      // padding: rem-calc(16) rem-calc(70);
+    }
+  }
+
+  // &--light {
+  //   background-color: $white;
+  //   color: $primary;
+  //   transition: 0.1s;
+
+  //   &:hover {
+  //     background-color: $primary-100;
+  //     transition: 0.1s;
+  //   }
+
+  //   .button__inner {
+  //     border: 2px solid $primary;
+  //   }
+  // }
+
+  // &--disabled {
+  //   opacity: 0.5;
+  //   cursor: not-allowed;
+  // }
+
+  &--transparent{
+    background-color: transparent;
+    color: $primary;
+
+    &:hover {
+      background-color: pink;
+      transition: 0.1s;
+      text-decoration: underline;
+    }
+  }
+
+}
