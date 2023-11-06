@@ -4,43 +4,42 @@ import style from './lead.mod.scss';
 import Heading from '../heading/heading';
 import Text from '../text/text';
 import Container from '../layout/container/container';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import Button from '../button/button';
 
 const Lead = ({
   heading,
-  subheading,
   text,
-  dark = false,
-  headingSize = 'xl',
-  h1 = false,
-  textAlign = 'centre',
+  image,
   noGutters,
+  githubHeading,
+  githubUrl,
+  linkedinHeading,
+  linkedinUrl,
+  getInTouchHeading,
+  getInTouchLink,
 }) => {
-  const classes = cn(style.lead, {
-    [style[`lead--align-left`]]: textAlign === 'left',
-  });
+  const classes = cn(style.lead);
 
   return (
-    <Container gutters={!noGutters} size={textAlign === 'centre' ? 'md' : 'xl'}>
+    <Container gutters={!noGutters}>
       <div className={classes}>
         <div className={style.lead__content}>
-          <div className={style.lead__subheading}>
-            <Heading
-              text={subheading}
-              tag={h1 ? 1 : 2}
-              size={'subheading'}
-              light={dark}
-            />
+          <div className={style.lead__image}>
+            <GatsbyImage image={image.gatsbyImageData} alt="" />
           </div>
           <div className={style.lead__heading}>
-            <Heading
-              text={heading}
-              tag={h1 ? 2 : 3}
-              size={headingSize}
-              light={dark}
-            />
+            <Heading text={heading} />
           </div>
-          <Text html text={text} size="lg" light={dark} align={textAlign} />
+          <div className={style.lead__text}>
+            <Text html text={text} />
+          </div>
         </div>
+        <div className={style.lead__buttons}>
+          <Button text={githubHeading} link={githubUrl} transparent />
+          <Button text={linkedinHeading} link={linkedinUrl} transparent />
+        </div>
+        <Button text={getInTouchHeading} link={getInTouchLink} />
       </div>
     </Container>
   );

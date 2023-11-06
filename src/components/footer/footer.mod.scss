@@ -2,7 +2,7 @@
 
 .footer {
   position: relative;
-  background-color: $grey-600;
+  background-color: $primary-500;
   padding: rem-calc(60) 0;
 
   @include breakpoint(small) {
@@ -55,7 +55,7 @@
   }
 
   &__bar {
-    background-color: $grey-700;
+    background-color: $aqua-purple-500;
     padding: rem-calc(20) 0;
 
     span,

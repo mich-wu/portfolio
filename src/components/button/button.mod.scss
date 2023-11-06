@@ -1,0 +1,46 @@
+@import 'helpers';
+
+.button {
+  position: relative;
+  background-color: $aqua-purple-300;
+  padding: rem-calc(3);
+  border-radius: rem-calc(200);
+  text-decoration: none;
+  color: $white;
+  font-size: rem-calc(20);
+  font-weight: 500;
+  line-height: normal;
+  transition: 0.1s;
+  max-width: fit-content;
+  display: block;
+
+  &:hover {
+    background-color: $aqua-purple-500;
+    transition: 0.1s;
+  }
+
+  &__inner {
+    color: $white;
+    padding: rem-calc(8) rem-calc(24);
+    border: 1px solid $white;
+    border-radius: rem-calc(200);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: $primary;
+
+    &:hover {
+      background-color: transparent;
+      transition: 0.1s;
+      text-decoration: underline;
+    }
+    .button__inner {
+      color: $primary-500;
+      padding: unset;
+    }
+  }
+}

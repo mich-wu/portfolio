@@ -28,10 +28,7 @@ const Footer = () => {
       <div className={style.footer__bar}>
         <Container size="xl" gutters>
           <div className={style.footer__credit}>
-            <span>
-              Copyright © 2023.{' '}
-              <a href="https://attivogroup.co/">Attivo Group.</a>
-            </span>
+            <span>Copyright © 2023</span>
           </div>
         </Container>
       </div>

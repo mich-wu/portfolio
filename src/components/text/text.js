@@ -13,7 +13,6 @@ const Text = ({
     [style[`text--size-${size}`]]: size,
     [style[`text--color-light`]]: light,
     [style[`text--color-dark`]]: dark,
-    [style[`text--color-dark`]]: dark,
   });
 
   return html ? (
