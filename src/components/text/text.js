@@ -8,10 +8,12 @@ const Text = ({
   light = false,
   dark = false,
   html = false,
+  white = false,
 }) => {
   const classes = cn(style.text, {
     [style[`text--size-${size}`]]: size,
     [style[`text--color-light`]]: light,
+    [style[`text--color-white`]]: white,
     [style[`text--color-dark`]]: dark,
   });
 

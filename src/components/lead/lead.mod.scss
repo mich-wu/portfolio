@@ -4,7 +4,6 @@
   position: relative;
 
   &__content {
-    // text-align: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -22,25 +21,18 @@
   }
 }
 
+&__subheading{
+  color: $aqua-purple-500;
+  font-size: rem-calc(18);
+  margin-bottom: rem-calc(11.5);
 
+}
   &__heading {
     margin-bottom: rem-calc(18);
   }
 
   &__text{
     max-width: rem-calc(550);
-  }
-
-  &__buttons {
-
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-
-    @include breakpoint(medium) {
-      margin-bottom: rem-calc(35);
-    }
-
   }
 
 }

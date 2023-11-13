@@ -2,71 +2,55 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/global/layout';
 import Header from '../components/header/header';
-import Social from '../components/social/social';
+import Lead from '../components/lead/lead';
+import Text from '../components/text/text';
 import Footer from '../components/footer/footer';
 import Section from '../components/section/section';
-import Container from '../components/layout/container/container';
-import Spacing from '../components/layout/spacing/spacing';
-import Lead from '../components/lead/lead';
-import Image from '../components/image/image';
-import imgSrc from '../images/person.jpg';
-import Services from '../components/services/services';
+import Hero from '../components/hero/hero';
+import Experiences from '../components/experiences/experiences';
 
 const IndexPage = ({ data }) => {
-  const {
-    title,
-    description,
-    image,
-    githubHeading,
-    githubUrl,
-    linkedinHeading,
-    linkedinUrl,
-    getInTouchHeading,
-    getInTouchLink,
-  } = data.datoCmsHomepage;
+  const content = data.datoCmsHomepage;
 
   return (
     <Layout>
       <Header />
+      <Section id={'home'}>
+        <Hero
+          title={content.title}
+          image={content.image}
+          description={content.description}
+          githubUrl={content.githubUrl}
+          linkedinUrl={content.linkedinUrl}
+        />
+      </Section>
+
       <Section id={'about'}>
-        <Container gutters>
-          <Spacing pt={6} pb={6}>
-            <Lead
-              heading={title}
-              subheading={'Design'}
-              text={description}
-              image={image}
-              githubHeading={githubHeading}
-              githubUrl={githubUrl}
-              linkedinHeading={linkedinHeading}
-              linkedinUrl={linkedinUrl}
-              getInTouchHeading={getInTouchHeading}
-              getInTouchLink={getInTouchLink}
-            />
-            <Spacing pt={3}></Spacing>
-          </Spacing>
-        </Container>
+        <Lead
+          subheading={content.aboutMeHeading}
+          heading={content.aboutMeText}
+        />
+        <Text html text={content.aboutMeDescription} />
       </Section>
-      {/* <Section id={'study'}>
-        <Container bg="white" gutters>
-          <Spacing pt={6} pb={6}>
-            <Services />
-          </Spacing>
-        </Container>
+
+      <Section id={'experience'}>
+        <Lead
+          subheading={content.experienceHeading}
+          heading={content.experienceText}
+          text={content.experienceDescription}
+        />
+        <Experiences experiences={content.experiences} />
       </Section>
-      <Section id={'portfolio'}>
-        <Container bg="white" gutters>
-          <Spacing pt={6} pb={6}>
-            <Services />
-          </Spacing>
-        </Container>
+
+      <Section id={'components'}>
+        <Lead
+          subheading={content.myWorkHeading}
+          heading={content.myWorkText}
+          text={content.myWorkDescription}
+        />
       </Section>
-      <Section id={'contact'}>
-        <Spacing pt={6} pb={8}>
-          <Social />
-        </Spacing>
-      </Section> */}
-      {/* <Footer /> */}
+
+      <Footer />
     </Layout>
   );
 };
@@ -88,13 +72,32 @@ export const query = graphql`
       linkedinUrl
       getInTouchHeading
       getInTouchLink
+      aboutMeHeading
+      aboutMeText
+      aboutMeDescription
+      experienceHeading
+      experienceText
+      experienceDescription
+      myWorkHeading
+      myWorkText
+      myWorkDescription
+      experiences {
+        id: originalId
+        title
+        subtitle
+        text
+        tags {
+          id: originalId
+          title
+        }
+      }
     }
   }
 `;
 
 export const Head = () => (
   <>
-    <title>Gatsby Starter Basic</title>
-    <meta name="description" content="Gatsby Starter Basic." />
+    <title>Michelle Wu</title>
+    <meta name="description" content="Michelle Wu" />
   </>
 );

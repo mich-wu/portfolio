@@ -1,23 +1,11 @@
 import React from 'react';
 import cn from 'classnames';
 import style from './icon.mod.scss';
-import Chat from '../global/icons/chat';
 
-const Icon = ({ icon = 'Chat', theme = 'none', dark = false }) => {
-  const classes = cn(style.icon, {
-    [style[`icon--theme-${theme}`]]: theme,
-    [style[`icon--dark`]]: dark,
-  });
-
-  const getIcon = () => {
-    if (icon === 'Chat') return <Chat />;
-  };
-
-  return (
-    <div className={classes}>
-      <div className={style.icon__wrap}>{getIcon()}</div>
-    </div>
-  );
-};
+const Icon = ({ children, link }) => (
+  <a className={style.icon} href={link}>
+    {children}
+  </a>
+);
 
 export default Icon;

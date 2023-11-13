@@ -8,20 +8,20 @@ const Header = () => {
 
   const links = [
     {
+      text: 'Home',
+      link: '#home',
+    },
+    {
       text: 'About',
       link: '#about',
     },
     {
-      text: 'Study + Experience',
-      link: '#study',
+      text: 'Experience',
+      link: '#experience ',
     },
     {
-      text: 'Portfolio',
-      link: '#portfolio ',
-    },
-    {
-      text: 'Contact',
-      link: '#contact',
+      text: 'Components',
+      link: '#components',
     },
   ];
 

@@ -9,5 +9,5 @@
 }
 
 body {
-  background-color: $body-background;
+  background: var(--gradient, linear-gradient(180deg, #F9C1ED 0%, #A38ED2 100%));
 }

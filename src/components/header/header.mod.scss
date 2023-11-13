@@ -4,7 +4,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: lavender;
+  border-bottom: 1px solid $pink-400;
+  background: $pink-300;
   height: rem-calc(70);
 
   &__nav {

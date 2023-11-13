@@ -1,73 +1,95 @@
 @import 'helpers';
 
 .icon {
-  position: relative;
 
-  &__wrap {
-    height: rem-calc(24);
-    width: rem-calc(24);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    svg {
-      width: 100%;
-      color: $primary;
-    }
+  height: rem-calc(90);
+  width: rem-calc(90);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50rem;
+  box-shadow: 0px 3px 8px rgba($color:  $primary-300, $alpha: 0.4), inset 0px 2px 3px rgba($color: $aqua-purple-300, $alpha: 0.4);
+  transition: 0.15s ease-in;
+
+  @include breakpoint(small) {
+    height: rem-calc(50);
+    width: rem-calc(50);
   }
 
-  &--theme-box {
-    display: flex;
-    padding: rem-calc(12);
-    justify-content: center;
-    align-items: center;
-    border-radius: rem-calc(10);
-    border: 1px solid $aqua-purple-300;
-    background: #fff;
-    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  }
-
-  &--theme-square {
-    width: rem-calc(48);
-    height: rem-calc(48);
-    display: flex;
-    padding: rem-calc(12);
-    justify-content: center;
-    align-items: center;
-    border-radius: rem-calc(10);
-    border: 1px solid $aqua-purple-300;
-    background: #fff;
-  }
-
-  &--theme-circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: $primary-300;
-    height: rem-calc(28);
-    width: rem-calc(28);
-
-    .icon__wrap {
-      padding: rem-calc(2);
-    }
-  }
-
-  &--theme-shadow {
-    display: flex;
-    padding: 0.75rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 8px solid $primary-500;
-    background: $primary-300;
-  }
-
-  &--dark {
-    background-color: $primary-500;
-    border-color: $primary-500;
+  &:hover {
+    box-shadow: 0px 3px 8px rgba($color: $aqua-purple-300, $alpha: 0.4), inset 0px 2px 5px rgba($color: $primary-300, $alpha: 0.4);
 
     svg {
-      color: $white;
+      transform: scale(0.95);
     }
   }
+  // position: relative;
+
+  // &__wrap {
+  //   height: rem-calc(24);
+  //   width: rem-calc(24);
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   svg {
+  //     width: 100%;
+  //     color: $primary;
+  //   }
+  // }
+
+  // &--theme-box {
+  //   display: flex;
+  //   padding: rem-calc(12);
+  //   justify-content: center;
+  //   align-items: center;
+  //   border-radius: rem-calc(10);
+  //   border: 1px solid $aqua-purple-300;
+  //   background: #fff;
+  //   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  // }
+
+  // &--theme-square {
+  //   width: rem-calc(48);
+  //   height: rem-calc(48);
+  //   display: flex;
+  //   padding: rem-calc(12);
+  //   justify-content: center;
+  //   align-items: center;
+  //   border-radius: rem-calc(10);
+  //   border: 1px solid $aqua-purple-300;
+  //   background: #fff;
+  // }
+
+  // &--theme-circle {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   border-radius: 50%;
+  //   background: $primary-300;
+  //   height: rem-calc(28);
+  //   width: rem-calc(28);
+
+  //   .icon__wrap {
+  //     padding: rem-calc(2);
+  //   }
+  // }
+
+  // &--theme-shadow {
+  //   display: flex;
+  //   padding: 0.75rem;
+  //   justify-content: center;
+  //   align-items: center;
+  //   border-radius: 50%;
+  //   border: 8px solid $primary-500;
+  //   background: $primary-300;
+  // }
+
+  // &--dark {
+  //   background-color: $primary-500;
+  //   border-color: $primary-500;
+
+  //   svg {
+  //     color: $white;
+  //   }
+  // }
 }
