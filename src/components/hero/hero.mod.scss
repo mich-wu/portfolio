@@ -1,0 +1,57 @@
+@import 'helpers';
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: rem-calc(804);
+
+  svg {
+    height: rem-calc(50);
+    color: $primary-500;
+    transition: 0.22s;
+
+    @include breakpoint(small) {
+      height: rem-calc(25);
+    }
+  }
+
+  &__cta{
+    display: flex;
+    gap: 1rem;
+    padding-left: 1rem;
+  }
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(35);
+    }
+  }
+  .icon {
+    height: rem-calc(90);
+    width: rem-calc(90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50rem;
+    box-shadow: 0px 3px 8px rgba($color:  $primary-300, $alpha: 0.4), inset 0px 2px 3px rgba($color: $aqua-purple-300, $alpha: 0.4);
+    transition: 0.15s ease-in;
+
+    @include breakpoint(small) {
+      height: rem-calc(50);
+      width: rem-calc(50);
+    }
+
+    &:hover {
+      box-shadow: 0px 3px 8px rgba($color: $aqua-purple-300, $alpha: 0.4), inset 0px 2px 5px rgba($color: $primary-300, $alpha: 0.4);
+
+      svg {
+        transform: scale(0.95);
+      }
+    }
+  }
+}

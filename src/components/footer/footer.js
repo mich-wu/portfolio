@@ -13,9 +13,9 @@ const Footer = () => {
         <Container size="xl" gutters>
           <div className={style.footer__content}>
             <h3>
-              Need a hand?
+              Meow meow meow
               <br />
-              Don't hesitate to get in touch with our team.
+              Meow meow meow meow.
             </h3>
             <div className={style.footer__contact}>
               <a className={style.footer__phone} href={`tel:0800101101`}>

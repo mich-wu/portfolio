@@ -2,9 +2,9 @@ import React from 'react';
 import cn from 'classnames';
 import style from './social.mod.scss';
 import LinkedIn from '../global/icons/linkedin';
-import Container from '../layout/container/container';
 import GithubIcon from '../global/icons/github';
 import MailIcon from '../global/icons/mail';
+import Container from '../layout/container/container';
 import Lead from '../lead/lead';
 
 const Social = () => {

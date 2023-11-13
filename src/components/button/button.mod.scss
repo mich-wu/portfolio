@@ -14,9 +14,11 @@
   max-width: fit-content;
   display: block;
 
+
   &:hover {
     background-color: $aqua-purple-500;
-    transition: 0.1s;
+  transition: all 0.4s ease;
+
   }
 
   &__inner {
@@ -41,6 +43,7 @@
     .button__inner {
       color: $primary-500;
       padding: unset;
+      border: none;
     }
   }
 }
