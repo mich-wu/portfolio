@@ -8,13 +8,9 @@
   max-width: rem-calc(804);
 
   svg {
-    height: rem-calc(50);
+    height: rem-calc(25);
     color: $primary-500;
     transition: 0.22s;
-
-    @include breakpoint(small) {
-      height: rem-calc(25);
-    }
   }
 
   &__cta{
@@ -32,19 +28,14 @@
     }
   }
   .icon {
-    height: rem-calc(90);
-    width: rem-calc(90);
+    height: rem-calc(50);
+    width: rem-calc(50);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50rem;
     box-shadow: 0px 3px 8px rgba($color:  $primary-300, $alpha: 0.4), inset 0px 2px 3px rgba($color: $aqua-purple-300, $alpha: 0.4);
     transition: 0.15s ease-in;
-
-    @include breakpoint(small) {
-      height: rem-calc(50);
-      width: rem-calc(50);
-    }
 
     &:hover {
       box-shadow: 0px 3px 8px rgba($color: $aqua-purple-300, $alpha: 0.4), inset 0px 2px 5px rgba($color: $primary-300, $alpha: 0.4);
