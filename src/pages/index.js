@@ -8,6 +8,7 @@ import Footer from '../components/footer/footer';
 import Section from '../components/section/section';
 import Hero from '../components/hero/hero';
 import Experiences from '../components/experiences/experiences';
+import Code from '../components/code/code';
 
 const IndexPage = ({ data }) => {
   const content = data.datoCmsHomepage;
@@ -48,6 +49,7 @@ const IndexPage = ({ data }) => {
           heading={content.myWorkText}
           text={content.myWorkDescription}
         />
+        <Code />
       </Section>
 
       <Footer />

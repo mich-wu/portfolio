@@ -32,7 +32,7 @@ const Hero = ({ title, description, image, githubUrl, linkedinUrl }) => {
 export default Hero;
 
 const Icon = ({ children, link }) => (
-  <a className={style.icon} href={link} target="_blank">
+  <a className={style.icon} href={link} target="_blank" rel="noreferrer">
     {children}
   </a>
 );

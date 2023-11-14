@@ -10,24 +10,22 @@ const Lead = ({ heading, subheading, text, image }) => {
   const classes = cn(style.lead);
 
   return (
-    <Container gutters>
-      <div className={classes}>
-        <div className={style.lead__content}>
-          <div className={style.lead__image}>
-            {image && <GatsbyImage image={image.gatsbyImageData} alt="" />}
-          </div>
-          {subheading && (
-            <div className={style.lead__subheading}>{subheading}</div>
-          )}
-          <div className={style.lead__heading}>
-            <Heading text={heading} />
-          </div>
-          <div className={style.lead__text}>
-            <Text html text={text} />
-          </div>
+    <div className={classes}>
+      <div className={style.lead__content}>
+        <div className={style.lead__image}>
+          {image && <GatsbyImage image={image.gatsbyImageData} alt="" />}
+        </div>
+        {subheading && (
+          <div className={style.lead__subheading}>{subheading}</div>
+        )}
+        <div className={style.lead__heading}>
+          <Heading text={heading} />
+        </div>
+        <div className={style.lead__text}>
+          <Text html text={text} />
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
