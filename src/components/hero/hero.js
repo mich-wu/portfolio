@@ -2,8 +2,6 @@ import React from 'react';
 import cn from 'classnames';
 import style from './hero.mod.scss';
 import Lead from '../lead/lead';
-import Button from '../button/button';
-import Container from '../layout/container/container';
 import LinkedIn from '../global/icons/linkedin';
 import GithubIcon from '../global/icons/github';
 import MailIcon from '../global/icons/mail';
