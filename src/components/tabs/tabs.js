@@ -14,7 +14,14 @@ const TabContent = ({ components }) => {
 
   return (
     <div className={classes}>
-      <Tabs value={value} onChange={handleChange} centered scrollButtons="auto">
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        centered
+        variant="scrollable"
+        scrollButtons
+        allowScrollButtonsMobile
+      >
         {components.map((component, index) => (
           <Tab label={component.title} key={index} disableRipple />
         ))}

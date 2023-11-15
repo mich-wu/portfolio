@@ -3,15 +3,20 @@
 .tabs {
   position: relative;
   background-color: #2E1835; 
+  max-width: rem-calc(690);
   
 
   :global(button.Mui-selected) {
-    color: white !important;
+    color: white ;
   }
+
+:global(.MuiTabs-scrollButtons){
+  color: white;
+}
 
   button {
     color: $aqua-purple-50;   
-    opacity: 0.5;
+    // opacity: 0.5;
     margin: 0.25rem 1rem;
     transition: 0.15s ease-in-out;
     &:hover {
