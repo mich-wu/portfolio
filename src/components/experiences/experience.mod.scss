@@ -1,20 +1,20 @@
 @import 'helpers';
 
 .experience {
-    position: relative;
+  position: relative;
 
-    &__text{
-      max-width: rem-calc(467);
-padding-left: 1rem;
-    }
+  &__text {
+    max-width: rem-calc(467);
+    padding-left: 1rem;
+  }
 
-    &__divider{
-      position: absolute;
-      top: 12rem;
-      left: 1.5rem;
-      bottom: 0;
-      width: 2px;
-      height: rem-calc(500);
-      background: var(--gradient, linear-gradient(180deg, #F9C1ED 0%, #A38ED2 100%));
-    }
+  &__divider {
+    position: absolute;
+    top: 12rem;
+    left: 1.5rem;
+    bottom: 0;
+    width: 2px;
+    height: rem-calc(500);
+    background: var(--gradient, linear-gradient(180deg, #F9C1ED 0%, #A38ED2 100%));
+  }
 }

@@ -15,6 +15,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.17",
     "classnames": "^2.3.2",
     "framer-motion": "^10.12.18",
     "gatsby": "^5.9.1",
@@ -23,6 +26,7 @@
     "gatsby-plugin-sass": "^6.9.0",
     "gatsby-plugin-sitemap": "^6.9.0",
     "gatsby-source-datocms": "^5.1.2",
+    "highlight.js": "^11.9.0",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

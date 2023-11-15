@@ -8,6 +8,7 @@ import Footer from '../components/footer/footer';
 import Section from '../components/section/section';
 import Hero from '../components/hero/hero';
 import Experiences from '../components/experiences/experiences';
+import TabContent from '../components/tabs/tabs';
 
 const IndexPage = ({ data }) => {
   const content = data.datoCmsHomepage;
@@ -48,6 +49,7 @@ const IndexPage = ({ data }) => {
           heading={content.myWorkText}
           text={content.myWorkDescription}
         />
+        <TabContent components={content.components} />
       </Section>
 
       <Footer />
@@ -90,6 +92,12 @@ export const query = graphql`
           id: originalId
           title
         }
+      }
+      components {
+        id: originalId
+        title
+        language
+        code
       }
     }
   }
