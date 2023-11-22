@@ -13,15 +13,20 @@ const Hero = ({ title, description, image, githubUrl, linkedinUrl }) => {
     <div className={classes}>
       <Lead heading={title} text={description} image={image} />
       <div className={style.hero__cta}>
-        <Icon link={linkedinUrl}>
-          <LinkedIn />
-        </Icon>
         <Icon link={githubUrl}>
           <GithubIcon />
+        </Icon>
+        <Icon link={linkedinUrl}>
+          <LinkedIn />
         </Icon>
         <Icon link={'mailto:mich.wu@outlook.com'}>
           <MailIcon />
         </Icon>
+      </div>
+      <div className={style.hero__nav}>
+        <h3>{'About'}</h3>
+        <h3>{'Experience'}</h3>
+        <h3>{'Projects'}</h3>
       </div>
     </div>
   );

@@ -11,7 +11,9 @@ const List = ({ components, active, handleActive }) => {
       <Lead
         subheading={'My Work'}
         heading={"Projects I've worked on"}
-        text={"Some work I'm proud of"}
+        text={
+          "A quick look at projects I've had the pleasure to work on while at Harvey Cameron"
+        }
       />
       {components.map((item, i) => {
         const isActive = active.id === item.id;
