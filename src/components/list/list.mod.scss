@@ -14,12 +14,11 @@
     cursor: pointer;
     border-bottom: 1px solid #FFC4F0;
     background: rgba(255, 255, 255, 0.10);
+    color: $primary-300;
   }
 
   &--active {
     .list__item {
-
-      // background-color: rgba(0, 0, 255, 0.105);
       p {
         font-weight: bold;
         color: $primary-500;
@@ -37,7 +36,7 @@
 
     &:hover {
       color: $primary-500;
-      opacity: 0.5;
+      opacity: 0.8;
     }
 
   }

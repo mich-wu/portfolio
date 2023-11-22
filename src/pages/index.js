@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Header />
+      {/* <Header /> */}
       <Section id={'home'}>
         <Hero
           title={content.title}
@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
       <Components components={content.components} />
       {/* </Section> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </Layout>
   );
 };

@@ -1,0 +1,14 @@
+@import 'helpers';
+
+.blurb {
+    position: relative;
+    color: white;
+
+    a{
+      color: white;
+
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+}

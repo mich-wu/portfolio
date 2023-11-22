@@ -10,10 +10,8 @@ const List = ({ components, active, handleActive }) => {
     <div className={classes}>
       <Lead
         subheading={'My Work'}
-        heading={'Components'}
-        text={
-          'Bring security up to DevOps speed with an API-first design that easily integrates with your stack'
-        }
+        heading={"Projects I've worked on"}
+        text={"Some work I'm proud of"}
       />
       {components.map((item, i) => {
         const isActive = active.id === item.id;

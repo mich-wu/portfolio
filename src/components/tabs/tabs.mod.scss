@@ -2,7 +2,9 @@
 
 .tabs {
   position: relative;
-  background-color: #2E1835;
+  // background-color: #2E1835;
+  background: var(--gradient, linear-gradient(180deg, #2E1835 0%, #A38ED2 100%));
+
   max-width: rem-calc(690);
 
 
