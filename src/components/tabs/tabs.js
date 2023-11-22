@@ -3,6 +3,7 @@ import cn from 'classnames';
 import style from './tabs.mod.scss';
 import Codeblock from '../codeblock/codeblock';
 import { Tabs, Tab } from '@mui/material';
+import Blurb from '../blurb/blurb';
 
 const TabContent = ({ components }) => {
   const classes = cn(style.tabs);
@@ -23,12 +24,13 @@ const TabContent = ({ components }) => {
         allowScrollButtonsMobile
       >
         {components.map((component, index) => (
-          <Tab label={component.title} key={index} disableRipple />
+          <Tab label={component.title} key={index} />
         ))}
       </Tabs>
       {components.map((component, index) => (
         <TabPanel value={value} index={index} key={index}>
-          <Codeblock {...component} />
+          <Blurb {...component} />
+          {/* <Codeblock {...component} /> */}
         </TabPanel>
       ))}
     </div>

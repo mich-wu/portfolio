@@ -9,13 +9,14 @@ import Section from '../components/section/section';
 import Hero from '../components/hero/hero';
 import Experiences from '../components/experiences/experiences';
 import TabContent from '../components/tabs/tabs';
+import Components from '../components/components/components';
 
 const IndexPage = ({ data }) => {
   const content = data.datoCmsHomepage;
 
   return (
     <Layout>
-      <Header />
+      {/* <Header /> */}
       <Section id={'home'}>
         <Hero
           title={content.title}
@@ -43,16 +44,16 @@ const IndexPage = ({ data }) => {
         <Experiences experiences={content.experiences} />
       </Section>
 
-      <Section id={'components'}>
-        <Lead
-          subheading={content.myWorkHeading}
-          heading={content.myWorkText}
-          text={content.myWorkDescription}
-        />
-        <TabContent components={content.components} />
-      </Section>
+      {/* <Section id={'components'}> */}
+      {/* <Lead
+        subheading={content.myWorkHeading}
+        heading={content.myWorkText}
+        text={content.myWorkDescription}
+      /> */}
+      <Components components={content.components} />
+      {/* </Section> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </Layout>
   );
 };
@@ -66,7 +67,7 @@ export const query = graphql`
       title
       description
       image {
-        gatsbyImageData(imgixParams: { fit: "crop", w: "106", h: "106" })
+        gatsbyImageData(imgixParams: { fit: "crop", w: "200", h: "200" })
       }
       githubHeading
       githubUrl
@@ -96,8 +97,13 @@ export const query = graphql`
       components {
         id: originalId
         title
-        language
-        code
+        link
+        codeBlocks {
+          id: originalId
+          title
+          language
+          code
+        }
       }
     }
   }
