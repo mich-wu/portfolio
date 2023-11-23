@@ -62,7 +62,7 @@ export const query = graphql`
       title
       description
       image {
-        gatsbyImageData(imgixParams: { fit: "crop", w: "500", h: "500" })
+        gatsbyImageData(imgixParams: { fit: "crop", w: "300", h: "300" })
       }
       githubHeading
       githubUrl
