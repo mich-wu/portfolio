@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import cn from 'classnames';
 import style from './hero.mod.scss';
 import Lead from '../lead/lead';
@@ -22,11 +22,6 @@ const Hero = ({ title, description, image, githubUrl, linkedinUrl }) => {
         <Icon link={'mailto:mich.wu@outlook.com'}>
           <MailIcon />
         </Icon>
-      </div>
-      <div className={style.hero__nav}>
-        <h3>{'About'}</h3>
-        <h3>{'Experience'}</h3>
-        <h3>{'Projects'}</h3>
       </div>
     </div>
   );

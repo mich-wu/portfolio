@@ -6,7 +6,8 @@
     flex-direction: column;
 
 
-    @include breakpoint(small) {
+
+    @include breakpoint(medium) {
       display: grid;
       grid-template-columns: 1fr 1fr;
     

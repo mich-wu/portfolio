@@ -8,7 +8,7 @@ const Section = ({ id, children }) => {
   const classes = cn(style.section);
 
   return (
-    <Container gutters>
+    <Container doubleGutters>
       <Spacing pt={6} pb={6}>
         <section id={id} className={classes}>
           {children}
