@@ -14,13 +14,13 @@
     margin-bottom: rem-calc(32);
 
     img {
-      border-radius: 50%;
+      border-radius: 50% !important;
       border: 1px solid rgba(91, 10, 92, 0.30);
       opacity: 0.1;
       background: #5B0A5C;
       mix-blend-mode: multiply;
-      height: rem-calc(150);
-      width: rem-calc(150);
+      max-height: rem-calc(150);
+      max-width: rem-calc(150);
     }
   }
 
