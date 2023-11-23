@@ -11,7 +11,7 @@ const Experience = ({ title, subtitle, text, tags }) => {
     setReadMore(!readMore);
   };
 
-  const truncatedText = readMore ? text : `${text.slice(0, 350)}...`;
+  const truncatedText = readMore ? text : `${text.slice(0, 305)}...`;
 
   const classes = cn(style.experience);
 
@@ -21,9 +21,9 @@ const Experience = ({ title, subtitle, text, tags }) => {
         <div className={style.experience__title}>{title}</div>
         <div className={style.experience__subtitle}>{subtitle}</div>
         <Text html white text={truncatedText} />
-        {!readMore && (
-          <div onClick={toggleReadMore} className={style.experience__subtitle}>
-            Read more
+        {text.length > 305 && (
+          <div onClick={toggleReadMore} className={style.experience__more}>
+            <p>{readMore ? 'Read Less' : 'Read More'}</p>
           </div>
         )}
         <div className={style.experience__tags}>
