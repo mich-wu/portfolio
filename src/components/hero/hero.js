@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import style from './hero.mod.scss';
 import Lead from '../lead/lead';
