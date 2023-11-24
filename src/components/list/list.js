@@ -15,21 +15,23 @@ const List = ({ components, active, handleActive }) => {
           "A quick look at projects I've had the pleasure to work on while at Harvey Cameron"
         }
       />
-      {components.map((item, i) => {
-        const isActive = active.id === item.id;
-        return (
-          <div className={isActive && [style[`list--active`]]}>
-            <div className={style.list__item} onClick={() => handleActive(i)}>
-              <p> {item.title}</p>
-              <p>
-                <a href={item.link} target="_blank">
-                  View Here →
-                </a>
-              </p>
+      <div className={style.list__list}>
+        {components.map((item, i) => {
+          const isActive = active.id === item.id;
+          return (
+            <div className={isActive && [style[`list--active`]]}>
+              <div className={style.list__item} onClick={() => handleActive(i)}>
+                <p> {item.title}</p>
+                <p>
+                  <a href={item.link} target="_blank">
+                    View Here →
+                  </a>
+                </p>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

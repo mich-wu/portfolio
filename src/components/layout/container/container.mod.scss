@@ -23,6 +23,13 @@
 
   &--gutters {
     padding: 0 2rem;
+    @include breakpoint(small) {
+      padding: 0 5rem;
+    }
+  }
+
+  &--double-gutters {
+    padding: 0 5rem;
   }
 
   &--background-Light {

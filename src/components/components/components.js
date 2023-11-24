@@ -15,7 +15,7 @@ const Components = ({ components }) => {
 
   return (
     <div className={classes}>
-      <Section>
+      <Section id={'components'}>
         <List
           components={components}
           active={active}

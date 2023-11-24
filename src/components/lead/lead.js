@@ -3,7 +3,6 @@ import cn from 'classnames';
 import style from './lead.mod.scss';
 import Heading from '../heading/heading';
 import Text from '../text/text';
-import Container from '../layout/container/container';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 const Lead = ({ heading, subheading, text, image }) => {

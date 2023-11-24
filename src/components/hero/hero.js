@@ -23,11 +23,6 @@ const Hero = ({ title, description, image, githubUrl, linkedinUrl }) => {
           <MailIcon />
         </Icon>
       </div>
-      <div className={style.hero__nav}>
-        <h3>{'About'}</h3>
-        <h3>{'Experience'}</h3>
-        <h3>{'Projects'}</h3>
-      </div>
     </div>
   );
 };

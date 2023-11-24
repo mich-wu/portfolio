@@ -9,13 +9,11 @@ const Blurb = ({ code }) => {
   const classes = cn(style.blurb);
 
   return (
-    <Container gutters>
-      <Spacing pt={1}>
-        <div className={classes}>
-          <Text white html text={code} />
-        </div>
-      </Spacing>
-    </Container>
+    <Spacing pt={1}>
+      <div className={classes}>
+        <Text white html text={code} />
+      </div>
+    </Spacing>
   );
 };
 

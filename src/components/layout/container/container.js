@@ -6,10 +6,12 @@ const Container = ({
   children,
   size = 'none',
   gutters = false,
+  doubleGutters = false,
   bg = 'None',
 }) => {
   const classes = cn(style.container, style[`container--size-${size}`], {
     [style[`container--gutters`]]: gutters,
+    [style[`container--double-gutters`]]: doubleGutters,
     [style[`container--background-${bg}`]]: bg,
   });
 

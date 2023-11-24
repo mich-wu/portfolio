@@ -29,11 +29,30 @@
   &__tags {
     color: $pink-300;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
     gap: 1rem;
-    font-weight: 500;
-    line-height: 140%;
-    letter-spacing: -0.5px;
+
+    
+    @include breakpoint(small) {
+      
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  &__more{
+    color: $pink-400;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.5;
+    }
   }
 
 

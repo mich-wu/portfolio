@@ -20,3 +20,8 @@ body {
 span.language-xml{
   line-height: 20px;
 }
+
+.gatsby-image-wrapper{
+  max-height: rem-calc(150);
+  max-width: rem-calc(150);
+}
