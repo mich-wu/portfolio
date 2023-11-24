@@ -94,10 +94,13 @@ export const query = graphql`
         title
         link
         codeBlocks {
-          id: originalId
-          title
-          language
-          code
+          ... on DatoCmsCode {
+            id: originalId
+            title
+            language
+            code
+            text
+          }
         }
       }
     }
