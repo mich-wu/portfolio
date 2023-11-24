@@ -2,10 +2,13 @@
 
 .tabs {
   position: relative;
-  // background-color: #2E1835;
-  background: var(--gradient, linear-gradient(180deg, #2E1835 0%, #A38ED2 100%));
+  background-color: $primary-800;
+  max-width: unset;
 
-  max-width: rem-calc(690);
+  @include breakpoint(medium) {
+    max-width: rem-calc(690);
+    align-self: start;
+  }
 
 
   :global(button.Mui-selected) {

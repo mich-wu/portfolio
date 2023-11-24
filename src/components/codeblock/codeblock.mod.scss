@@ -1,5 +1,9 @@
 @import 'helpers';
 
 .codeblock {
-    position: relative;
+  position: relative;
+
+  &__text {
+    padding: 1rem 1.5rem;
+  }
 }

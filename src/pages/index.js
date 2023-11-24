@@ -96,6 +96,7 @@ export const query = graphql`
         codeBlocks {
           id: originalId
           title
+          text
           language
           code
         }
