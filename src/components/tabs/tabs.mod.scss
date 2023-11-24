@@ -3,8 +3,10 @@
 .tabs {
   position: relative;
   background-color: $primary-800;
-  max-width: rem-calc(690);
-  @include breakpoint(small) {
+  max-width: unset;
+
+  @include breakpoint(medium) {
+    max-width: rem-calc(690);
     align-self: start;
   }
 
