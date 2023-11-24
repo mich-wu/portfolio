@@ -19,8 +19,9 @@
       opacity: 0.1;
       background: #5B0A5C;
       mix-blend-mode: multiply;
-      max-height: rem-calc(150);
-      max-width: rem-calc(150);
+      height: rem-calc(150);
+      // max-height: rem-calc(150);
+      // max-width: rem-calc(150);
     }
   }
 

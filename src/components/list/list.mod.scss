@@ -8,9 +8,9 @@
     flex-direction: row;
     overflow-y: hidden;
     overflow-x: auto;
+    white-space: nowrap;
     gap: 0.5rem;
     padding: 1rem 0;
-    white-space: nowrap;
 
     @include breakpoint(small) {
       display: flex;
