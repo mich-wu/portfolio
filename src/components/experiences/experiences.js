@@ -8,8 +8,8 @@ const Experiences = ({ experiences }) => {
 
   return (
     <div className={classes}>
-      {experiences.map((item) => (
-        <Experience {...item} />
+      {experiences.map((item, id) => (
+        <Experience {...item} key={id} />
       ))}
     </div>
   );

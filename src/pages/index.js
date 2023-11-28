@@ -99,6 +99,9 @@ export const query = graphql`
           text
           language
           code
+          media {
+            url
+          }
         }
       }
     }

@@ -19,12 +19,12 @@ const List = ({ components, active, handleActive }) => {
         {components.map((item, i) => {
           const isActive = active.id === item.id;
           return (
-            <div className={isActive && [style[`list--active`]]}>
+            <div className={isActive && [style[`list--active`]]} key={i}>
               <div className={style.list__item} onClick={() => handleActive(i)}>
                 <p> {item.title}</p>
                 <p>
                   <a href={item.link} target="_blank">
-                    View Here →
+                    View Website →
                   </a>
                 </p>
               </div>
