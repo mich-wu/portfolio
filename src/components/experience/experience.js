@@ -27,8 +27,8 @@ const Experience = ({ title, subtitle, text, tags }) => {
           </div>
         )}
         <div className={style.experience__tags}>
-          {tags.map((tag) => (
-            <Tag {...tag} />
+          {tags.map((tag, id) => (
+            <Tag {...tag} key={id} />
           ))}
         </div>
       </div>

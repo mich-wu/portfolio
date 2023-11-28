@@ -12,16 +12,15 @@
 
   &__image {
     margin-bottom: rem-calc(32);
+    max-width: rem-calc(150);
+    max-height: rem-calc(150);
+
     img {
       border-radius: 50% !important;
-      border: 1px solid rgba(91, 10, 92, 0.30);
+      border: 1px solid #5b0a5c4d;
       opacity: 0.1;
-      background: #5B0A5C;
+      background: $primary-500;
       mix-blend-mode: multiply;
-    }
-    .gatsby-image-wrapper{
-      max-height: rem-calc(150);
-      max-width: rem-calc(150);
     }
   }
 

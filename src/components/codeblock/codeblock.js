@@ -5,20 +5,36 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/atom-one-dark.css';
 import Text from '../text/text';
 import Spacing from '../layout/spacing/spacing';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-const Codeblock = ({ code, language, text }) => {
+const Codeblock = ({ code, language, text, media }) => {
   const classes = cn(style.codeblock);
+
   useEffect(() => {
     hljs.highlightAll();
   }, [code, language]);
 
-  return !language ? (
-    <Spacing pt={1}>
-      <div className={style.codeblock__text}>
-        <Text white html text={text} />
-      </div>
-    </Spacing>
-  ) : (
+  if (media) {
+    return (
+      <GatsbyImage
+        image={media.gatsbyImageData}
+        alt={'gif'}
+        class={style.codeblock__image}
+      />
+    );
+  }
+
+  if (!language) {
+    return (
+      <Spacing pt={1}>
+        <div className={style.codeblock__text}>
+          <Text white html text={text} />
+        </div>
+      </Spacing>
+    );
+  }
+
+  return (
     <div className={classes}>
       <pre>
         <code className={language}>{code}</code>

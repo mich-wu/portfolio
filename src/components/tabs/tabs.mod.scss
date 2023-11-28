@@ -6,7 +6,7 @@
   max-width: unset;
 
   @include breakpoint(medium) {
-    max-width: rem-calc(690);
+    max-width: rem-calc(640);
     align-self: start;
   }
 

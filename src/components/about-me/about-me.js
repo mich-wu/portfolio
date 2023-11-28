@@ -10,7 +10,9 @@ const AboutMe = ({ aboutMeHeading, aboutMeText, aboutMeDescription }) => {
   return (
     <div className={classes}>
       <div className={style.about__intro}>
-        <Lead heading={aboutMeText} subheading={aboutMeHeading} />
+        {aboutMeText && aboutMeHeading && (
+          <Lead heading={aboutMeText} subheading={aboutMeHeading} />
+        )}
         <Text html text={aboutMeDescription} />
       </div>
     </div>
