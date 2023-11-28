@@ -100,7 +100,7 @@ export const query = graphql`
           language
           code
           media {
-            url
+            gatsbyImageData(imgixParams: { w: "640" })
           }
         }
       }

@@ -5,18 +5,22 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/atom-one-dark.css';
 import Text from '../text/text';
 import Spacing from '../layout/spacing/spacing';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const Codeblock = ({ code, language, text, media }) => {
+  console.log(media);
   const classes = cn(style.codeblock);
   useEffect(() => {
     hljs.highlightAll();
   }, [code, language]);
 
-  if (media && media.url) {
+  if (media) {
     return (
-      <video autoPlay controls className={style.codeblock__video}>
-        <source src={media.url} type="video/mp4" />
-      </video>
+      <GatsbyImage
+        image={media.gatsbyImageData}
+        alt={'gif'}
+        class={style.codeblock__image}
+      />
     );
   }
 
