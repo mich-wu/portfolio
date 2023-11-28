@@ -8,8 +8,8 @@ import Spacing from '../layout/spacing/spacing';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 const Codeblock = ({ code, language, text, media }) => {
-  console.log(media);
   const classes = cn(style.codeblock);
+
   useEffect(() => {
     hljs.highlightAll();
   }, [code, language]);
