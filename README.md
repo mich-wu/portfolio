@@ -6,9 +6,8 @@ Hi there! This is a portfolio showcasing my journey and experiences as a web dev
 
  **Built using the following tech:**
 
-    React, DatoCMS, GraphQL, Gatsby, and SCSS
+    React, Gatsby, DatoCMS, GraphQL, and SCSS
 
-I want to thank the following people:
-Anton Purver, Nathan Newell, Callum Radford, Tim Williams, Hannah Sandilands, Kate Parr, and Kale Joines. My beloved dev team at HC are who made me the developer I am today 💓 
+I want to thank my beloved dev team at HC who made me into the developer I am today 💓 Anton Purver, Nathan Newell, Tim Williams, Hannah Sandilands, Calllum Radford, Kate Parr, and Kale Joines.
 
-This is an on-going work in progress - I want to convert it to typescript and also play around with GSAP 😊 
+This is an on-going work in progress 😊 
