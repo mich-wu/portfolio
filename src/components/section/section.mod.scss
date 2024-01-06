@@ -1,15 +1,15 @@
 @import 'helpers';
 
 .section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0;
 
 
-
-    @include breakpoint(medium) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    
-    }
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem 0;
+  }
 }

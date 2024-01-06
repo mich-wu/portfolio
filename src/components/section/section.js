@@ -9,11 +9,11 @@ const Section = ({ id, children }) => {
 
   return (
     <Container gutters>
-      <Spacing pt={6} pb={6}>
-        <section id={id} className={classes}>
-          {children}
-        </section>
-      </Spacing>
+      {/* <Spacing pt={6} pb={6}> */}
+      <section id={id} className={classes}>
+        {children}
+      </section>
+      {/* </Spacing> */}
     </Container>
   );
 };
