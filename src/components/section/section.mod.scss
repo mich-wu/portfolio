@@ -1,15 +1,18 @@
 @import 'helpers';
 
 .section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 
 
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 
-    @include breakpoint(medium) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    
-    }
+  }
 }
