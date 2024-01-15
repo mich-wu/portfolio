@@ -57,5 +57,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Michelle Wu Portfolio`,
+        icon: `src/assets/images/favicon.png`,
+      },
+    },
   ],
 };
