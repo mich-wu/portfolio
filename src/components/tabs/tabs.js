@@ -4,18 +4,18 @@ import style from './tabs.mod.scss';
 import Codeblock from '../codeblock/codeblock';
 import { Tabs, Tab } from '@mui/material';
 
-const TabContent = ({ components }) => {
+const TabContent = ({ components, tabValue, setTabValue }) => {
   const classes = cn(style.tabs);
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setTabValue(newValue);
   };
 
   return (
     <div className={classes}>
       <Tabs
-        value={value}
+        value={tabValue}
         onChange={handleChange}
         variant="scrollable"
         scrollButtons
@@ -26,7 +26,7 @@ const TabContent = ({ components }) => {
         ))}
       </Tabs>
       {components.map((component, index) => (
-        <TabPanel value={value} index={index} key={index}>
+        <TabPanel value={tabValue} index={index} key={index}>
           <Codeblock {...component} />
         </TabPanel>
       ))}

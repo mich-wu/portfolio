@@ -23,7 +23,7 @@ const List = ({ components, active, handleActive }) => {
               <div className={style.list__item} onClick={() => handleActive(i)}>
                 <p> {item.title}</p>
                 <p>
-                  <a href={item.link} target="_blank">
+                  <a href={item.link} target="_blank" rel="noreferrer">
                     View Website →
                   </a>
                 </p>
