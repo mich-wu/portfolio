@@ -10,9 +10,9 @@ const List = ({ components, active, handleActive }) => {
     <div className={classes}>
       <Lead
         subheading={'My Work'}
-        heading={"Projects I've worked on"}
+        heading={"Work I'm proud of"}
         text={
-          "A quick look at projects I've had the pleasure to work on while at Harvey Cameron"
+          "A few projects I've had the pleasure to work on while at Harvey Cameron"
         }
       />
       <div className={style.list__list}>

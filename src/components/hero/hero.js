@@ -5,9 +5,11 @@ import Lead from '../lead/lead';
 import LinkedIn from '../global/icons/linkedin';
 import GithubIcon from '../global/icons/github';
 import MailIcon from '../global/icons/mail';
+import CvIcon from '../global/icons/cv';
 
-const Hero = ({ title, description, image, githubUrl, linkedinUrl }) => {
+const Hero = ({ title, description, image, githubUrl, linkedinUrl, cv }) => {
   const classes = cn(style.hero);
+  console.log(cv);
 
   return (
     <div className={classes}>
@@ -21,6 +23,9 @@ const Hero = ({ title, description, image, githubUrl, linkedinUrl }) => {
         </Icon>
         <Icon link={'mailto:mich.wu@outlook.com'}>
           <MailIcon />
+        </Icon>
+        <Icon link={cv}>
+          <CvIcon />
         </Icon>
       </div>
     </div>

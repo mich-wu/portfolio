@@ -1,14 +1,10 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/global/layout';
-import Header from '../components/header/header';
 import Lead from '../components/lead/lead';
-import Text from '../components/text/text';
-import Footer from '../components/footer/footer';
 import Section from '../components/section/section';
 import Hero from '../components/hero/hero';
 import Experiences from '../components/experiences/experiences';
-import TabContent from '../components/tabs/tabs';
 import Components from '../components/components/components';
 import AboutMe from '../components/about-me/about-me';
 
@@ -24,6 +20,7 @@ const IndexPage = ({ data }) => {
           description={content.description}
           githubUrl={content.githubUrl}
           linkedinUrl={content.linkedinUrl}
+          cv={content.cv.url}
         />
         <AboutMe
           aboutMeHeading={content.aboutMeHeading}
@@ -31,15 +28,6 @@ const IndexPage = ({ data }) => {
           aboutMeText={content.aboutMeText}
         />
       </Section>
-
-      {/* <Section id={'about'}>
-        <Lead
-          subheading={content.aboutMeHeading}
-          heading={content.aboutMeText}
-        />
-        <Text html text={content.aboutMeDescription} />
-      </Section> */}
-
       <Section id={'experience'}>
         <Lead
           subheading={content.experienceHeading}
@@ -88,6 +76,9 @@ export const query = graphql`
           id: originalId
           title
         }
+      }
+      cv {
+        url
       }
       components {
         id: originalId

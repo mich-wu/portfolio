@@ -8,7 +8,7 @@ import Section from '../section/section';
 const Components = ({ components }) => {
   const classes = cn(style.components);
   const [active, setActive] = useState(components[0]);
-  const [tabValue, setTabValue] = useState(0); // Add state for tab value
+  const [tabValue, setTabValue] = useState(0);
 
   const handleActive = (i) => {
     setActive(components[i]);
