@@ -3,7 +3,7 @@
 .experience {
   position: relative;
   border: 1px solid rgba(245, 245, 255, 0.10);
-  background: var(--purple-800, #2E1835);
+  background: $primary-800;
   max-width: rem-calc(690);
 
   &__wrapper {

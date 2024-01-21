@@ -35,7 +35,13 @@ const Hero = ({ title, description, image, githubUrl, linkedinUrl, cv }) => {
 export default Hero;
 
 const Icon = ({ children, link }) => (
-  <a className={style.icon} href={link} target="_blank" rel="noreferrer">
+  <a
+    className={style.icon}
+    href={link}
+    target="_blank"
+    rel="noreferrer"
+    aria-label={link}
+  >
     {children}
   </a>
 );
