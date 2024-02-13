@@ -21,7 +21,7 @@ const Hero = ({ title, description, image, githubUrl, linkedinUrl, cv }) => {
         <Icon link={linkedinUrl}>
           <LinkedIn />
         </Icon>
-        <Icon link={'mailto:mich.wu@outlook.com'}>
+        <Icon link={'mailto:mich.jh.wu@gmail.com'}>
           <MailIcon />
         </Icon>
         <Icon link={cv}>
